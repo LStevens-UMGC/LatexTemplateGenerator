@@ -1,0 +1,27 @@
+\ProvidesPackage{copyabletext}[2024/12/02 Custom copyable text box style]
+
+\RequirePackage{tcolorbox} % For the styled box
+\RequirePackage{xcolor}    % For colors
+\RequirePackage{hyperref}  % For interactive elements (optional)
+\tcbuselibrary{listingsutf8} % For better text handling
+
+% Define the custom tcolorbox style
+\tcbset{
+    highlight text/.style={
+        enhanced,
+        colframe=blue!50!black,
+        colback=blue!5,
+        sharp corners,
+        attach boxed title to top left={xshift=4mm, yshift=-1mm},
+        boxed title style={
+            sharp corners,
+            colframe=blue!50!black,
+            colback=blue!20,
+            left=3mm
+        },
+        % title={Copy Button Placeholder}
+    }
+}
+
+% Define a new environment for the copyable text
+\newtcolorbox{copyabletext}[1][]{highlight text,#1}

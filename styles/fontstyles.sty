@@ -1,0 +1,28 @@
+% fontstyles.sty
+
+\RequirePackage{titlesec}    % Customizes section titles
+
+% Set Computer Modern Sans for the body text
+\renewcommand{\familydefault}{\sfdefault} % Computer Modern Sans
+
+% Set Computer Modern Mono for \texttt{}
+\renewcommand{\ttdefault}{cmtt} % Computer Modern Monospaced
+
+% Customize section titles to use Computer Modern Serif (default LaTeX font)
+\titleformat{\section}
+  {\normalfont\Large\bfseries\rmfamily} % Computer Modern Serif, bold, and large for section titles
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\rmfamily} % Computer Modern Serif, bold, and medium for subsection titles
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\rmfamily} % Computer Modern Serif, bold, and normal for subsubsection titles
+  {\thesubsubsection}{1em}{}
+
+% Define a light gray color
+\definecolor{lightgray}{rgb}{0.9, 0.9, 0.9}
+
+% Overwrite \texttt to add background color
+\newcommand{\bgtt}[1]{\colorbox{lightgray}{\texttt{#1}}}

@@ -1,0 +1,114 @@
+\ProvidesPackage{codestyles}
+
+% Language Definitions
+\lstdefinelanguage{Pseudocode}{
+  morekeywords={FUNCTION, FOR, IF, ELSE, WHILE, RETURN, BREAK, CONTINUE, SET, END}, % Define pseudocode keywords
+  sensitive=false,  % Keywords are case insensitive
+  morecomment=[l]{//},  % Line comment style
+  morestring=[b]"  % String style
+}
+
+\lstdefinelanguage{Kotlin}{
+  comment=[l]{//},
+  emph={filter, first, firstOrNull, forEach, lazy, map, mapNotNull, println},
+  keywords={!in, !is, abstract, actual, annotation, as, as?, break, by, catch, class, companion, const, constructor, continue, crossinline, data, delegate, do, dynamic, else, enum, expect, external, false, field, file, final, finally, for, fun, get, if, import, in, infix, init, inline, inner, interface, internal, is, lateinit, noinline, null, object, open, operator, out, override, package, param, private, property, protected, public, receiveris, reified, return, return@, sealed, set, setparam, super, suspend, tailrec, this, throw, true, try, typealias, typeof, val, var, vararg, when, where, while},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[s]{"""*}{*"""},
+  ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+  sensitive=true
+}
+
+% Language Styles
+
+% Java styling
+\lstdefinestyle{java}{
+  language=Java,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red},
+  stepnumber=1,
+  frame=single,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b
+}
+
+% XML styling
+\lstdefinestyle{xml}{
+  language=XML,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red},
+  stepnumber=1,
+  frame=single,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b
+}
+
+% Pseudocode styling
+\lstdefinestyle{pseudo}{
+  language=Pseudocode,            % Use custom Pseudocode language
+  basicstyle=\ttfamily\footnotesize, % Use a typewriter font for code
+  keywordstyle=\color{blue}\bfseries, % Keywords in bold blue
+  commentstyle=\color{green!50!black}, % Comments in green
+  stringstyle=\color{red},         % Strings in red
+  numbers=left,                    % Line numbers on the left
+  numberstyle=\tiny\color{gray},   % Line numbers in tiny gray font
+  stepnumber=1,                    % Line number step
+  frame=single,                    % Add a frame around the code
+  tabsize=4,                       % Set tab size to 4 spaces
+  showspaces=false,                % Do not show spaces
+  showstringspaces=false,          % Do not show spaces in strings
+  breaklines=true,                 % Enable line breaking
+  breakatwhitespace=true,          % Only break lines at whitespaces
+  captionpos=b                     % Position of the caption below the code
+}
+
+% Kotlin styling
+\lstdefinestyle{kt}{
+  language=Kotlin,
+  basicstyle=\ttfamily\footnotesize,
+  % numbers=left,                    % Line numbers on the left
+  % numberstyle=\tiny\color{gray},   % Line numbers in tiny gray font
+  % stepnumber=1,                    % Line number step
+  frame=single,                    % Add a frame around the code
+  tabsize=4,                       % Set tab size to 4 spaces
+  showspaces=false,                % Do not show spaces
+  showstringspaces=false,          % Do not show spaces in strings
+  breaklines=true,                 % Enable line breaking
+  breakatwhitespace=true,          % Only break lines at whitespaces
+  captionpos=b,                    % Position of the caption below the code
+  commentstyle={\color{gray}\ttfamily},
+  emphstyle={\color{OrangeRed}},
+  identifierstyle=\color{black},
+  keywordstyle={\color{NavyBlue}\bfseries},
+  ndkeywordstyle={\color{BurntOrange}\bfseries},
+  stringstyle={\color{ForestGreen}\ttfamily}
+}
+
+% Python styling
+\lstdefinestyle{py}{
+  language=Python,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red},
+  stepnumber=1,
+  frame=single,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b
+}
